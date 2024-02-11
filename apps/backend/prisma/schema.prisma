@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator kysely {
+  provider     = "prisma-kysely"
+  output       = "../src"
+  fileName     = "types.ts"
+}
+
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id                      Int                      @id @default(autoincrement())
+  createdAt               DateTime                 @default(now())
+  title                   String
+  content                 String
+}

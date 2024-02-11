@@ -1,0 +1,10 @@
+name = "ferraille"
+main = "src/worker.ts"
+compatibility_date = "2024-02-09"
+
+node_compat = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ferraille"
+database_id = "64fee20b-afc2-4634-b7db-b2d7866531a6"

@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "private": true,
+  "scripts": {
+    "prisma:migrate": "prisma migrate dev",
+    "dev": "wrangler dev --persist-to=./.wrangler/state",
+    "sql": "wrangler d1 execute",
+    "build": "wrangler build"
+  },
+  "dependencies": {
+    "@pothos/core": "^3.41.0",
+    "graphql": "^16.8.1",
+    "graphql-yoga": "^5.1.1",
+    "kysely": "^0.27.2",
+    "kysely-d1": "^0.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "prisma": "^5.9.1",
+    "prisma-kysely": "^1.8.0",
+    "wrangler": "^3.28.1"
+  }
+}
